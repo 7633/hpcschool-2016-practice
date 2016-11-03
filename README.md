@@ -202,7 +202,7 @@ Microsoft Visual Studio 2015. Далее для определенности выполняется сборка проект
     cv::CascadeClassifier detector;
   };
   ```
-  
+
      Замечания:
 
      - `cv::CascadeClassifier` - класс библиотеки OpenCV, используемый
