@@ -193,24 +193,24 @@ Microsoft Visual Studio 2015. Далее для определенности выполняется сборка проект
 
   ```cpp
   class CascadeDetector : public Detector {
-   public:
+  public:
     virtual bool Init(const std::string& model_file_path);
     virtual void Detect(const cv::Mat& frame, std::vector<cv::Rect>& objects,
                         std::vector<double>& scores);
 
-   protected:
+  protected:
     cv::CascadeClassifier detector;
   };
   ```
   
-  Замечания:
-    - `cv::CascadeClassifier` - класс библиотеки OpenCV, используемый
-      для представления сущности каскадного классификатора. Указанный класс объявлен
-      в заголовочном файле `opencv2/objdetect/objdetect.hpp`.
-    - `cv::Mat` - тип данных библиотеки OpenCV, используемый для хранения
-      изображений.
-    - `cv::Rect` - тип данных библиотеки OpenCV, используемый для преставления
-      прямоугольника.
+     Замечания:
+     - `cv::CascadeClassifier` - класс библиотеки OpenCV, используемый
+       для представления сущности каскадного классификатора. Указанный класс объявлен
+       в заголовочном файле `opencv2/objdetect/objdetect.hpp`.
+     - `cv::Mat` - тип данных библиотеки OpenCV, используемый для хранения
+       изображений.
+     - `cv::Rect` - тип данных библиотеки OpenCV, используемый для преставления
+       прямоугольника.
 
   1. Добавить код для создания экземпляра класса `CascadeDetector` в фабричный метод
      `Detector::CreateDetector`.
@@ -271,12 +271,13 @@ Microsoft Visual Studio 2015. Далее для определенности выполняется сборка проект
         на изображении и отобразить результат.
      
      Примечания:
-        - Для загрузки изображения используйте функцию [`imread`][imread] библиотеки OpenCV.
-        - Для работы с видео используйте класс [`VideoCapture`][video-capture] библиотеки OpenCV.
-        - Для отображения изображения используйте функции [`namedWindow`,
-          `imshow`, `waitKey`][show-image] модуля `highgui` библиотеки OpenCV.
-        - Для отрисовки прямоугольника на изображении используйте функцию
-          [`rectangle`][draw-rectangle] модуля `imgproc`.
+
+     - Для загрузки изображения используйте функцию [`imread`][imread] библиотеки OpenCV.
+     - Для работы с видео используйте класс [`VideoCapture`][video-capture] библиотеки OpenCV.
+     - Для отображения изображения используйте функции [`namedWindow`,
+       `imshow`, `waitKey`][show-image] модуля `highgui` библиотеки OpenCV.
+     - Для отрисовки прямоугольника на изображении используйте функцию
+       [`rectangle`][draw-rectangle] модуля `imgproc`.
 
   1. Загрузить один из готовых детекторов из директории
      `data/detection/cascades/` и визуально оценить качество его работы на
