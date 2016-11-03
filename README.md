@@ -4,7 +4,7 @@
 
 ### Цели
 
-*Цель данной лабораторной работы* состоит в том, чтобы решить одну
+__Цель данной лабораторной работы__ состоит в том, чтобы решить одну
 из классических задач компьютерного зрения - детектирование объектов -
 с использованием средств библиотеки OpenCV. В качестве целевых
 объектов для детектирования рассматриваются логотипы ННГУ, OpenCV и Intel.
@@ -40,7 +40,7 @@ __Дополнительные задачи__
   1. __Обучение детектора.__ Обучение предполагает выполнение следующих
      действий:
 
-     - Подготовка тренировочных данных - множества положительных
+     - Подготовка *тренировочных данных* - множества положительных
        (содержащих объект) и отрицательных (не содержащих объект) примеров
        изображений.
      - Извлечение признаков из каждого изображения тренировочного набора.
@@ -74,12 +74,12 @@ __Дополнительные задачи__
 
 Репозиторий содержит следующие директории и файлы:
 
-  - `include` - заголовочные файлы модулей библиотеки `hpc_2016_logo_detection`.
+  - `include` - заголовочные файлы модулей библиотеки `hpc_2016_logo_detection_lib`.
   - `samples` - примеры использования методов. Изначально директория
     содержит шаблонный пример консольного приложения `template_demo.cpp`.
     Лабораторная работа предполагает разработку собственного приложения,
     обеспечивающего решение задачи детектирования на базе указанного шаблона.
-  - `src` - исходные файлы модулей библиотеки `hpc_2016_logo_detection`.
+  - `src` - исходные файлы модулей библиотеки `hpc_2016_logo_detection_lib`.
   - `data` - директория, содержащая данные, необходимые для решения задачи:
 
     - `detection/cascades` - xml-файлы, содержащие обученные модели каскадного
@@ -98,7 +98,7 @@ __Дополнительные задачи__
 ## Общая структура программного модуля
 
 В лабораторной работе основные задачи решаются на базе программного
-модуля `detection` библиотеки `hpc_2016_logo_detection`. Модуль
+модуля `detection` библиотеки `hpc_2016_logo_detection_lib`. Модуль
 включает заголовочный файл `include\detection.hpp`
 и исходный файл`src\detection.cpp`. Модуль содержит объявление
 абстрактного класса `Detector`.
@@ -131,14 +131,13 @@ class Detector {
 В данном разделе описана типичная последовательность действий, которую
 необходимо выполнить для сборки проекта с использованием утилиты CMake и
 Microsoft Visual Studio 2015. Далее для определенности выполняется сборка проекта
-`hpcschool-2016-practice`.
+`hpc_2016_logo_detection`.
 
-  1. Рядом с директорией `hpcschool-2016-practice` создайте
+  1. Рядом с директорией проекта `hpcschool-2016-practice` создайте
      `hpcschool-2016-practice-build`. В новой директории будут размещены файлы
      решения и проектов, сгенерированные с помощью CMake.
 
      ```bash
-     $ cd ..
      $ mkdir hpcschool-2016-practice-build
      ```
 
@@ -156,6 +155,7 @@ Microsoft Visual Studio 2015. Далее для определенности выполняется сборка проект
   $ cmake -DOpenCV_DIR="<OpenCVConfig.cmake-path>" -G <generator-name> <path-to-hpcschool-2016-practice>
   # <OpenCVConfig.cmake-path> - директория, в которой установлена
   #     библиотека OpenCV и расположен файл OpenCVConfig.cmake
+  #     в терминал-классе это директория c:\OpenCV31\opencv\build
   # <generator-name> - название генератора, в случае тестовой
   #     инфраструктуры участников школы может быть "Visual Studio 14 2015 Win64"
   #     (если в командной строке набрать cmake без параметров, то можно просмотреть
@@ -168,22 +168,23 @@ Microsoft Visual Studio 2015. Далее для определенности выполняется сборка проект
   например, 3.1.0, которую можно скачать [здесь](http://opencv.org/downloads.html).
   В терминал-классах OpenCV 3.1.0 установлена в директорию `C:\OpenCV31`
 
-  1. Откройте сгенерированный файл решения `hpcschool-2016-practice.sln`. В терминал-классах
-     Microsoft Visual Studio располагается по пути:
+  1. Откройте сгенерированный файл решения `hpc_2016_logo_detection.sln`.
+     В терминал-классах Microsoft Visual Studio располагается по пути:
      `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe`
   1. Нажмите правой кнопкой мыши по проекту `ALL_BUILD` и выберите пункт
      `Rebuild` контекстного меню, чтобы собрать решение. В результате все
      бинарные файлы будут размещены в директории
-     `hpcschool-2016-practice-build/bin`.
+     `hpcschool-2016-practice-build/bin`, библиотеки - `hpcschool-2016-practice-build/lib`.
   1. Для запуска приложения откройте командную строку (`cmd.exe` в `Пуск`)
      и перейдите в директорию с бинарными файлами, используя команду `cd`.
   1. Можно запустить шаблонное приложение `template_demo.exe`. Возможное сообщение
      при запуске: `The program can't start because
-     opencv_world310.dll is missing from your computer. Try reinstalling
+     opencv_world310d.dll is missing from your computer. Try reinstalling
      the program to fix this problem.`. Решение 1: скопировать
      соответствующую библиотеку из `C:\OpenCV31\opencv\build\x64\vc14\bin`
      к бинарным файлам проекта. Решение 2: добавить путь `C:\OpenCV31\opencv\build\x64\vc14\bin`
-     в переменную окружения `PATH`.
+     в переменную окружения `PATH`. Замечание: если сборка проекта производилась
+     в Release-конфигурации, то данная библиотека называется `opencv_world310.dll`.
 
 ### Детальная инструкция по выполнению работы
 
@@ -201,6 +202,15 @@ Microsoft Visual Studio 2015. Далее для определенности выполняется сборка проект
     cv::CascadeClassifier detector;
   };
   ```
+  
+  Замечания:
+    - `cv::CascadeClassifier` - класс библиотеки OpenCV, используемый
+      для представления сущности каскадного классификатора. Указанный класс объявлен
+      в заголовочном файле `opencv2/objdetect/objdetect.hpp`.
+    - `cv::Mat` - тип данных библиотеки OpenCV, используемый для хранения
+      изображений.
+    - `cv::Rect` - тип данных библиотеки OpenCV, используемый для преставления
+      прямоугольника.
 
   1. Добавить код для создания экземпляра класса `CascadeDetector` в фабричный метод
      `Detector::CreateDetector`.
@@ -229,15 +239,20 @@ Microsoft Visual Studio 2015. Далее для определенности выполняется сборка проект
      1. В качестве значения параметра `score` вернуть число срабатываний детектора,
         пришедшихся на один объект.
 
+  1. Проверить, что после добавления класса `CascadeClassifier` проект по-прежнему
+     компилируется.
   1. Сделать копию файла `samples\template_demo.cpp` под именем `samples\detection_demo.cpp`.
+     Перегенерируйте решение с помощью CMake, чтобы среди проектов появился новый
+     проект `detection_demo`.
   1. Разработать приложение `samples\detection_demo.cpp` в соответствии
      с требованиями, перечисленными в основных задачах.
      
      1. Создать массив опций приложения: `image` - путь до исходного
         изображения; `video` - путь до исходного видеофайла;
         `camera` - идентификатор камеры, с которой требуется получить видеопоток;
-        `model` - путь до файла детектора.
-        Опции `image`, `video` и `camera` взаимоисключающие.
+        `model` - путь до файла детектора. Опции `image`, `video` и `camera`
+        взаимоисключающие, поэтому предлагается наращивать функционал постепенно,
+        начиная с поддержки детектирования на изображении.
 
      ```cpp
      const char* kOptions =
@@ -254,19 +269,35 @@ Microsoft Visual Studio 2015. Далее для определенности выполняется сборка проект
 
      1. Отрисовать все срабатывания детектора в виде прямоугольников
         на изображении и отобразить результат.
+     
+     Примечания:
+        - Для загрузки изображения используйте функцию [`imread`][imread] библиотеки OpenCV.
+        - Для работы с видео используйте класс [`VideoCapture`][video-capture] библиотеки OpenCV.
+        - Для отображения изображения используйте функции [`namedWindow`,
+          `imshow`, `waitKey`][show-image] модуля `highgui` библиотеки OpenCV.
+        - Для отрисовки прямоугольника на изображении используйте функцию
+          [`rectangle`][draw-rectangle] модуля `imgproc`.
 
   1. Загрузить один из готовых детекторов из директории
-     `test/test_data/detection/cascades/` и визуально оценить качество его работы на
-     тестовом видео (`test/test_data/video/logo.mp4`) или/и видео с веб-камеры.
+     `data/detection/cascades/` и визуально оценить качество его работы на
+     тестовом видео (`data/video/logo.mp4`) или/и видео с веб-камеры.
      Также можно протестировать готовые модели для детектирования лиц/людей,
      которые предоставляются в составе библиотеки OpenCV
      (`<source-каталог OpenCV>/data/*cascades/`).
+     
+     Примечание: для запуска приложения необходимо использовать командную
+     строку, формат которой приведен ниже.
+     ```bash
+     $ ./detection_demo.exe -d="<detector-type>" -m="<path-to-xml>" ...
+     # <detector-type> - detector type (takes value "cascade")
+     # <path-to-xml> - path to model (`data\detection\cascades\*.xml`).
+     ```
 
   1. Поочередно обучить детекторы на LBP- и HAAR-признаках для одного из логотипов
-     из директории `test/test_data/detection/positives`.
+     из директории `data/detection/positives`.
 
-     1. Скопировать папку `test/test_data/detection/negatives/`
-        и файл `test/test_data/detection/negatives.txt` в текущую рабочую директорию.
+     1. Скопировать папку `data/detection/negatives/`
+        и файл `data/detection/negatives.txt` в текущую рабочую директорию.
 
      1. Запустить приложение `opencv_traincascade` из состава OpenCV
         (`<build-каталог OpenCV>/bin/opencv_traincascade` или 
@@ -274,7 +305,7 @@ Microsoft Visual Studio 2015. Далее для определенности выполняется сборка проект
 
         * `-vec <путь до vec-файла с позитивными примерами>`.
           Готовые vec-файлы c 2000 позитивов для некоторых логотипов можно найти в
-          директории `test/test_data/detection/vec_files/`.
+          директории `data/detection/vec_files/`.
 
         * `-numPos <кол-во позитивов для тренировки>`.
 
@@ -326,9 +357,13 @@ Microsoft Visual Studio 2015. Далее для определенности выполняется сборка проект
 
 <!-- LINKS -->
 
-[opencv]:http://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.1.0/opencv-3.1.0.exe/download
-[cmake]:https://cmake.org/download
-[git-client]:https://git-scm.com/downloads
+[opencv]: http://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.1.0/opencv-3.1.0.exe/download
+[cmake]: https://cmake.org/download
+[git-client]: https://git-scm.com/downloads
 [hog-documentation]: http://docs.opencv.org/master/d5/d33/structcv_1_1HOGDescriptor.html
 [cascade-documentation]: http://docs.opencv.org/master/d1/de5/classcv_1_1CascadeClassifier.html
 [factory-method]: https://sourcemaking.com/design_patterns/factory_method
+[video-capture]: http://docs.opencv.org/master/d8/dfe/classcv_1_1VideoCapture.html
+[imread]: http://docs.opencv.org/master/d4/da8/group__imgcodecs.html#ga288b8b3da0892bd651fce07b3bbd3a56
+[show-image]: http://docs.opencv.org/2.4/doc/tutorials/introduction/display_image/display_image.html
+[draw-rectangle]: http://docs.opencv.org/3.1.0/d6/d6e/group__imgproc__draw.html#ga07d2f74cadcf8e305e810ce8eed13bc9
