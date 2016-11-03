@@ -126,6 +126,65 @@ class Detector {
 
 Также класс содержит [фабричный метод][factory-method] `CreateDetector`.
 
+### Сборка проекта с помощью CMake и Microsoft Visual Studio 2015
+
+В данном разделе описана типичная последовательность действий, которую
+необходимо выполнить для сборки проекта с использованием утилиты CMake и
+Microsoft Visual Studio 2015. Далее для определенности выполняется сборка проекта
+`hpcschool-2016-practice`.
+
+  1. Рядом с директорией `hpcschool-2016-practice` создайте
+     `hpcschool-2016-practice-build`. В новой директории будут размещены файлы
+     решения и проектов, сгенерированные с помощью CMake.
+
+     ```bash
+     $ cd ..
+     $ mkdir hpcschool-2016-practice-build
+     ```
+
+  1. Перейдите в директорию `hpcschool-2016-practice-build`:
+
+     ```bash
+     $ cd ./hpcschool-2016-practice-build
+     ```
+
+  1. Сгенерируйте файлы решения и проектов с помощью утилиты CMake. Для этого
+     можно воспользоваться графическим приложением, входящим в состав
+     утилиты, либо выполнить следующую команду:
+
+  ```bash
+  $ cmake -DOpenCV_DIR="<OpenCVConfig.cmake-path>" -G <generator-name> <path-to-hpcschool-2016-practice>
+  # <OpenCVConfig.cmake-path> - директория, в которой установлена
+  #     библиотека OpenCV и расположен файл OpenCVConfig.cmake
+  # <generator-name> - название генератора, в случае тестовой
+  #     инфраструктуры участников школы может быть "Visual Studio 14 2015 Win64"
+  #     (если в командной строке набрать cmake без параметров, то можно просмотреть
+  #     список доступных генераторов)
+  # <path-to-hpcschool-2016-practice> - путь до директории
+  #     hpcschool-2016-practice, где лежат исходные коды проекта (если предыдущие действия
+  #     выполнены корректно, то это директория`../hpcschool-2016-practice`)
+  ```
+  Обратите внимание, что для сборки проекта необходима версия OpenCV 3.1.x,
+  например, 3.1.0, которую можно скачать [здесь](http://opencv.org/downloads.html).
+  В терминал-классах OpenCV 3.1.0 установлена в директорию `C:\OpenCV31`
+
+  1. Откройте сгенерированный файл решения `hpcschool-2016-practice.sln`. В терминал-классах
+     Microsoft Visual Studio располагается по пути:
+     `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe`
+  1. Нажмите правой кнопкой мыши по проекту `ALL_BUILD` и выберите пункт
+     `Rebuild` контекстного меню, чтобы собрать решение. В результате все
+     бинарные файлы будут размещены в директории
+     `hpcschool-2016-practice-build/bin`.
+  1. Для запуска приложения откройте командную строку (`cmd.exe` в `Пуск`)
+     и перейдите в директорию с бинарными файлами, используя команду `cd`.
+  1. Можно запустить шаблонное приложение `template_demo.exe`. Возможное сообщение
+     при запуске: `The program can't start because
+     opencv_world310.dll is missing from your computer. Try reinstalling
+     the program to fix this problem.`. Решение 1: скопировать
+     соответствующую библиотеку из `C:\OpenCV31\opencv\build\x64\vc14\bin`
+     к бинарным файлам проекта. Решение 2: добавить путь `C:\OpenCV31\opencv\build\x64\vc14\bin`
+     в переменную окружения `PATH`.
+
 ### Детальная инструкция по выполнению работы
 
   1. Дополнить заголовочный файл `include\detection.hpp` объявлением 
