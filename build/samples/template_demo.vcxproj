@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{CF5F3C6E-7AFD-34C2-B9B9-307FC095773F}</ProjectGUID>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>template_demo</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\School\detection_practice\build\bin\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">template_demo.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">template_demo</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H:\School\detection_practice\build\bin\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">template_demo.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">template_demo</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>H:\School\detection_practice\include;H:\Libs\opencv_2\opencv\build\include;H:\Libs\opencv_2\opencv\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>H:\School\detection_practice\include;H:\Libs\opencv_2\opencv\build\include;H:\Libs\opencv_2\opencv\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>H:\School\detection_practice\include;H:\Libs\opencv_2\opencv\build\include;H:\Libs\opencv_2\opencv\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\lib\Debug\hpc_2016_logo_detection_lib.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310d.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310d.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310d.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310d.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310d.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310d.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310d.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310d.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310d.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310d.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310d.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310d.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310d.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310d.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310d.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310d.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>H:/School/detection_practice/build/lib/Debug/template_demo.lib</ImportLibrary>
+      <ProgramDataBaseFile>H:/School/detection_practice/build/bin/template_demo.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>H:\School\detection_practice\include;H:\Libs\opencv_2\opencv\build\include;H:\Libs\opencv_2\opencv\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>H:\School\detection_practice\include;H:\Libs\opencv_2\opencv\build\include;H:\Libs\opencv_2\opencv\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>H:\School\detection_practice\include;H:\Libs\opencv_2\opencv\build\include;H:\Libs\opencv_2\opencv\build\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\lib\Release\hpc_2016_logo_detection_lib.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310.lib;H:\Libs\opencv_2\opencv\build\x64\vc14\lib\opencv_world310.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>H:/School/detection_practice/build/lib/Release/template_demo.lib</ImportLibrary>
+      <ProgramDataBaseFile>H:/School/detection_practice/build/bin/template_demo.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="H:\School\detection_practice\samples\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule H:/School/detection_practice/samples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HH:/School/detection_practice -BH:/School/detection_practice/build --check-stamp-file H:\School\detection_practice\build\samples\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:/School/detection_practice/samples/CMakeLists.txt;H:\School\detection_practice\samples\CMakeLists.txt;H:\School\detection_practice\samples\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\School\detection_practice\build\samples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule H:/School/detection_practice/samples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HH:/School/detection_practice -BH:/School/detection_practice/build --check-stamp-file H:\School\detection_practice\build\samples\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H:/School/detection_practice/samples/CMakeLists.txt;H:\School\detection_practice\samples\CMakeLists.txt;H:\School\detection_practice\samples\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H:\School\detection_practice\build\samples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="H:\School\detection_practice\samples\template_demo.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="H:/School/detection_practice/build/ZERO_CHECK.vcxproj">
+      <Project>E1B8EE27-A92B-38A4-8432-6C04DBDA3003</Project>
+    </ProjectReference>
+    <ProjectReference Include="H:/School/detection_practice/build/src/hpc_2016_logo_detection_lib.vcxproj">
+      <Project>73C8771A-5278-3B6B-8030-50956B1CFE53</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

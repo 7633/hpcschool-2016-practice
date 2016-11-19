@@ -1,0 +1,5 @@
+H:/School/detection_practice/build/samples/CMakeFiles/template_demo.dir
+H:/School/detection_practice/build/CMakeFiles/ALL_BUILD.dir
+H:/School/detection_practice/build/samples/CMakeFiles/detection_demo.dir
+H:/School/detection_practice/build/src/CMakeFiles/hpc_2016_logo_detection_lib.dir
+H:/School/detection_practice/build/CMakeFiles/ZERO_CHECK.dir

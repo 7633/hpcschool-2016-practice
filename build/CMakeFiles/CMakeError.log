@@ -1,0 +1,92 @@
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX11 failed with the following output:
+Change Dir: H:/School/detection_practice/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_0522e.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine версии 14.0.25420.1
+(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+Сборка начата 11.11.2016 2:35:58.
+Проект "H:\School\detection_practice\build\CMakeFiles\CMakeTmp\cmTC_0522e.vcxproj" в узле 1 (целевые объекты по умолчанию).
+PrepareForBuild:
+  Создание каталога "cmTC_0522e.dir\Debug\".
+  Создание каталога "H:\School\detection_practice\build\CMakeFiles\CMakeTmp\Debug\".
+  Создание каталога "cmTC_0522e.dir\Debug\cmTC_0522e.tlog\".
+InitializeBuildStatus:
+  Создание "cmTC_0522e.dir\Debug\cmTC_0522e.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D COMPILER_SUPPORTS_CXX11 /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_0522e.dir\Debug\\" /Fd"cmTC_0522e.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue  -std=c++11 H:\School\detection_practice\build\CMakeFiles\CMakeTmp\src.cxx
+  Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.00.24215.1 для x64
+  (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D COMPILER_SUPPORTS_CXX11 /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_0522e.dir\Debug\\" /Fd"cmTC_0522e.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue  -std=c++11 H:\School\detection_practice\build\CMakeFiles\CMakeTmp\src.cxx
+  
+cl : командная строка warning D9002: пропуск неизвестного параметра "-std=c++11" [H:\School\detection_practice\build\CMakeFiles\CMakeTmp\cmTC_0522e.vcxproj]
+  src.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"H:\School\detection_practice\build\CMakeFiles\CMakeTmp\Debug\cmTC_0522e.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:/School/detection_practice/build/CMakeFiles/CMakeTmp/Debug/cmTC_0522e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:/School/detection_practice/build/CMakeFiles/CMakeTmp/Debug/cmTC_0522e.lib" /MACHINE:X64  /machine:x64 /debug cmTC_0522e.dir\Debug\src.obj
+  cmTC_0522e.vcxproj -> H:\School\detection_practice\build\CMakeFiles\CMakeTmp\Debug\cmTC_0522e.exe
+  cmTC_0522e.vcxproj -> H:/School/detection_practice/build/CMakeFiles/CMakeTmp/Debug/cmTC_0522e.pdb (Full PDB)
+FinalizeBuildStatus:
+  Файл "cmTC_0522e.dir\Debug\cmTC_0522e.tlog\unsuccessfulbuild" удаляется.
+  Обращение к "cmTC_0522e.dir\Debug\cmTC_0522e.tlog\cmTC_0522e.lastbuildstate".
+Сборка проекта "H:\School\detection_practice\build\CMakeFiles\CMakeTmp\cmTC_0522e.vcxproj" завершена (целевые объекты по умолчанию).
+
+Сборка успешно завершена.
+
+"H:\School\detection_practice\build\CMakeFiles\CMakeTmp\cmTC_0522e.vcxproj" (целевой объект по умолчанию) (1) ->
+(Целевой объект ClCompile) -> 
+  cl : командная строка warning D9002: пропуск неизвестного параметра "-std=c++11" [H:\School\detection_practice\build\CMakeFiles\CMakeTmp\cmTC_0522e.vcxproj]
+
+    Предупреждений: 1
+    Ошибок: 0
+
+Затраченное время: 00:00:00.82
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX0X failed with the following output:
+Change Dir: H:/School/detection_practice/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_7f069.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine версии 14.0.25420.1
+(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+Сборка начата 11.11.2016 2:35:59.
+Проект "H:\School\detection_practice\build\CMakeFiles\CMakeTmp\cmTC_7f069.vcxproj" в узле 1 (целевые объекты по умолчанию).
+PrepareForBuild:
+  Создание каталога "cmTC_7f069.dir\Debug\".
+  Создание каталога "H:\School\detection_practice\build\CMakeFiles\CMakeTmp\Debug\".
+  Создание каталога "cmTC_7f069.dir\Debug\cmTC_7f069.tlog\".
+InitializeBuildStatus:
+  Создание "cmTC_7f069.dir\Debug\cmTC_7f069.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D COMPILER_SUPPORTS_CXX0X /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_7f069.dir\Debug\\" /Fd"cmTC_7f069.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue  -std=c++0x H:\School\detection_practice\build\CMakeFiles\CMakeTmp\src.cxx
+  Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.00.24215.1 для x64
+  (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D COMPILER_SUPPORTS_CXX0X /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_7f069.dir\Debug\\" /Fd"cmTC_7f069.dir\Debug\vc140.pdb" /Gd /TP /errorReport:queue  -std=c++0x H:\School\detection_practice\build\CMakeFiles\CMakeTmp\src.cxx
+  
+cl : командная строка warning D9002: пропуск неизвестного параметра "-std=c++0x" [H:\School\detection_practice\build\CMakeFiles\CMakeTmp\cmTC_7f069.vcxproj]
+  src.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"H:\School\detection_practice\build\CMakeFiles\CMakeTmp\Debug\cmTC_7f069.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:/School/detection_practice/build/CMakeFiles/CMakeTmp/Debug/cmTC_7f069.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:/School/detection_practice/build/CMakeFiles/CMakeTmp/Debug/cmTC_7f069.lib" /MACHINE:X64  /machine:x64 /debug cmTC_7f069.dir\Debug\src.obj
+  cmTC_7f069.vcxproj -> H:\School\detection_practice\build\CMakeFiles\CMakeTmp\Debug\cmTC_7f069.exe
+  cmTC_7f069.vcxproj -> H:/School/detection_practice/build/CMakeFiles/CMakeTmp/Debug/cmTC_7f069.pdb (Full PDB)
+FinalizeBuildStatus:
+  Файл "cmTC_7f069.dir\Debug\cmTC_7f069.tlog\unsuccessfulbuild" удаляется.
+  Обращение к "cmTC_7f069.dir\Debug\cmTC_7f069.tlog\cmTC_7f069.lastbuildstate".
+Сборка проекта "H:\School\detection_practice\build\CMakeFiles\CMakeTmp\cmTC_7f069.vcxproj" завершена (целевые объекты по умолчанию).
+
+Сборка успешно завершена.
+
+"H:\School\detection_practice\build\CMakeFiles\CMakeTmp\cmTC_7f069.vcxproj" (целевой объект по умолчанию) (1) ->
+(Целевой объект ClCompile) -> 
+  cl : командная строка warning D9002: пропуск неизвестного параметра "-std=c++0x" [H:\School\detection_practice\build\CMakeFiles\CMakeTmp\cmTC_7f069.vcxproj]
+
+    Предупреждений: 1
+    Ошибок: 0
+
+Затраченное время: 00:00:00.67
+
+Source file was:
+int main() { return 0; }

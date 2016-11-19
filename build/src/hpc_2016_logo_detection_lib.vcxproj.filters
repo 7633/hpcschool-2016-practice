@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="H:\School\detection_practice\src\benchmark.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\School\detection_practice\src\detection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="H:\School\detection_practice\include\benchmark.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\School\detection_practice\include\detection.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="H:\School\detection_practice\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{888669AF-B138-387E-8407-F7005D307B16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{70C52D8A-FF52-3A7B-A069-F3462F9CF43E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
